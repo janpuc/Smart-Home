@@ -43,3 +43,6 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 sudo docker-compose -v && echo "Success" || echo "Failure"
+
+echo "Create Proxy Network"
+sudo docker network create --gateway 192.168.50.1 --subnet 192.168.50.0/24 proxy
