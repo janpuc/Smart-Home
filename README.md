@@ -3,4 +3,4 @@ Trying to start a new journey with Home Assistant, this time with documentation.
 
 Documentation
 
-https://janpuc.gitub.io/Smart-Home
+https://janpuc.github.io/Smart-Home
