@@ -14,7 +14,7 @@ sudo apt-get -y install apt-transport-https \
 	|| echo "Problem installing dependencies"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - \
 	|| echo "Problem adding gpg key"
-sudo apt-get fingerprint 0EBFCD88 && "Success" || echo "Failure"
+sudo apt-key fingerprint 0EBFCD88 && "Success" || echo "Failure"
 
 echo "Adding Repository"
 sudo add-apt-repository \
