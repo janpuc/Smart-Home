@@ -6,7 +6,7 @@ sudo apt-get remove docker docker-engine docker.io containerd runc \
 
 echo "Setting up Repository"
 sudo apt-get update || echo "Problem updating repositories"
-sudo apt-get install apt-transport-https \
+sudo apt-get -y install apt-transport-https \
 	ca-certificates \
 	curl \
 	gnupg-agent \
@@ -25,7 +25,7 @@ sudo add-apt-repository \
 
 echo "Installing Docker Engine"
 sudo apt-get update || echo "Problem updating Repositories"
-sudo apt-get install docker-ce docker-ce-cli containerd.io \
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io \
 	&& echo "Success" || echo "Failure"
 
 echo "Verify installation"
