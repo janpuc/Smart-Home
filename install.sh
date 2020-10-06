@@ -32,7 +32,12 @@ echo "Verify installation"
 sudo docker run hello-world && echo "Success" || echo "Failure"
 
 echo "Add docker sudo privileges"
-sudo groupadd docker
+if grep -q docker /etc/group
+	then
+		echo "Docker group exists"
+	else
+		sudo groupadd docker
+fi
 sudo usermod -aG docker $USER
 newgrp docker
 
