@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  swag:
+    container_name: swag
+    image: linuxserver/swag
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Warsaw
+      - URL=smartdomek.xyz
+      - SUBDOMAINS=wildcard,
+      - VALIDATION=dns
+      - DNSPLUGIN=cloudflare
+      - EMAIL=jan.pucilowski99@gmail.com
+      - DHLEVEL=4096
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ../config/swag:/config
